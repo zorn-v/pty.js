@@ -19,7 +19,7 @@
     },
     'targets' : [
         {
-            'target_name' : 'winpty-agent',
+            'target_name' : 'winpty-agent.x64',
             'type' : 'executable',
             'include_dirs' : [
                 'include',
@@ -65,7 +65,7 @@
             ],
         },
         {
-            'target_name' : 'winpty',
+            'target_name' : 'winpty.x64',
             'type' : 'shared_library',
             'include_dirs' : [
                 'include',

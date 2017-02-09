@@ -54,7 +54,7 @@ std::string to_utf8(const wchar_t* buffer, int len)
                 const_cast< char* >(newbuffer.c_str()),
                 nChars,
                 NULL,
-                NULL); 
+                NULL);
 
         return newbuffer;
 }
@@ -68,7 +68,7 @@ std::wstring to_wstring(const std::string& s)
 {
  int len;
  int slength = (int)s.length() + 1;
- len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0); 
+ len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0);
  wchar_t* buf = new wchar_t[len];
  MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, buf, len);
  std::wstring r(buf);
@@ -91,7 +91,7 @@ std::wstring to_wstring(const std::string& s)
 
 // TODO: Error handling, handle out-of-memory.
 
-#define AGENT_EXE L"winpty-agent.exe"
+#define AGENT_EXE L"winpty-agent.x64.exe"
 
 static volatile LONG consoleCounter;
 
@@ -491,7 +491,7 @@ WINPTY_API winpty_t *winpty_open_use_own_datapipe(const wchar_t *dataPipe, int c
 	}
 
 	return pc;
-} 
+}
 
 WINPTY_API int winpty_start_process(winpty_t *pc,
                                     const wchar_t *appname,
